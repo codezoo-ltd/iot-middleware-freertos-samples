@@ -4,9 +4,10 @@
 set(COMPONENT_INCLUDE_DIRS
     .
     ../config
+	../components/esp32-DHT11
 )
 
 idf_component_register(SRCS "azure_iot_freertos_esp32_main.c"
                     INCLUDE_DIRS ${COMPONENT_INCLUDE_DIRS}
-                    REQUIRES esp_event esp_wifi freertos nvs_flash coreMQTT azure-sdk-for-c azure-iot-middleware-freertos sample-azure-iot)
+                    REQUIRES driver esp_event esp_wifi freertos nvs_flash coreMQTT azure-sdk-for-c azure-iot-middleware-freertos sample-azure-iot)
 
